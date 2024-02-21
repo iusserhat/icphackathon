@@ -1,0 +1,30 @@
+{
+  "canisters": {
+    "icphackathon_backend": {
+      "candid": "src/icphackathon_backend/icphackathon_backend.did",
+      "package": "icphackathon_backend",
+      "type": "rust"
+    },
+    "icphackathon_frontend": {
+      "dependencies": [
+        "icphackathon_backend"
+      ],
+      "frontend": {
+        "entrypoint": "src/icphackathon_frontend/src/index.html"
+      },
+      "source": [
+        "src/icphackathon_frontend/assets",
+        "dist/icphackathon_frontend/"
+      ],
+      "type": "assets"
+    }
+  },
+  "defaults": {
+    "build": {
+      "args": "",
+      "packtool": ""
+    }
+  },
+  "output_env_file": ".env",
+  "version": 1
+}
