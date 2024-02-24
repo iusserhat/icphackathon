@@ -82,7 +82,7 @@ fn detect_electrical_leakage() -> LeakageStatus {
     LeakageStatus::NoLeakage
 }
 
-#[update]
+#[ic_cdk::update]
 fn update_electricity_events() -> Result<(), String> {
     let api_url = "https://mockapi.io/clone/65d8af7ac96fbb24c1bc1bf8/electricityevent";
     
